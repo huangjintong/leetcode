@@ -1,0 +1,12 @@
+class Solution:
+    def hasGroupsSizeX(self, deck: List[int]) -> bool:
+        from fractions import gcd
+        times=dict()
+        num=[]
+        for i in deck:        
+            if i not in times.keys():
+                times[i] = 0
+            times[i] += 1
+        for j in times:
+            num.append(times[j])
+        return reduce(gcd, num) >= 2
