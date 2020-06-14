@@ -1,0 +1,13 @@
+class Solution:
+    def toGoatLatin(self, S: str) -> str:
+        yuanyin=['a','e','i','o','u','A','E','I','O','U']
+        string=S.split()
+        for i in range(0,len(string)):
+            if string[i][0] in yuanyin:
+                string[i]=string[i]+'ma'+(i+1)*'a'
+            else:
+                string[i]=string[i]+string[i][0]
+                string[i]=string[i][1:]+'ma'+(i+1)*'a'
+        return ' '.join(string)
+
+                
