@@ -9,4 +9,4 @@ class Solution:
             if sieve[i//2]:
                 sieve[i*i//2::i] = bytearray((n-i*i-1)//(2*i)+1)
         return len([2, *compress(range(3,n,2),sieve[1:])])
- 
+#代码超过人数最多的一次，执行用时：64 ms，在所有Python3提交中击败了98.44％的用户内存消耗：19.5 MB，在所有Python3提交中击败了87.50％的用户
