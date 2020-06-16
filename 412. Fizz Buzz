@@ -1,0 +1,10 @@
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        x=list(range(1,n+1))
+        if n>=3:
+            x[2::3]=['Fizz']*len(x[2::3])
+        if n>=5:
+            x[4::5]=['Buzz']*len(x[4::5])
+        if n>=15:
+            x[14::15]=["FizzBuzz"]*len(x[14::15])
+        return  [ str(i) for i in x ]
