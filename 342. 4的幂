@@ -1,0 +1,16 @@
+class Solution:
+    def isPowerOfFour(self, num: int) -> bool:
+        if num==1:
+            return True
+        if num%4!=0:
+            return False   
+        numb_list=[]
+        x=4
+        n=1
+        while x**n<2**31:
+            numb_list.append(x**n)
+            n+=1
+        if num in numb_list:
+            return True
+        else:
+            return False
