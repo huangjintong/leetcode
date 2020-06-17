@@ -1,0 +1,7 @@
+class Solution:
+    def findComplement(self, num: int) -> int:
+        a=format(num, 'b')
+        b=str(a).replace('1','2')
+        c=b.replace('0','1')
+        d=c.replace('2','0')
+        return int('0b'+d,2)
