@@ -1,0 +1,7 @@
+class Solution:
+    def bitwiseComplement(self, N: int) -> int:
+        a=format(N, 'b')
+        b=str(a).replace('1','2')
+        c=b.replace('0','1')
+        d=c.replace('2','0')
+        return int('0b'+d,2)
