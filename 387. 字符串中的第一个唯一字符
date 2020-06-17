@@ -1,0 +1,8 @@
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        dic = collections.Counter(s).items()
+        lis=list(dic)
+        for i in range(len(lis)):
+            if lis[i][-1]==1:
+                return s.index(lis[i][0])
+        return -1
