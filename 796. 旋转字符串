@@ -1,0 +1,14 @@
+class Solution:
+    def rotateString(self, A: str, B: str) -> bool:
+        if len(A)!=len(B):
+            return False
+        if A==B:
+            return True
+        i=0
+        while i<len(A):
+            C=A[1:]+A[0]
+            if B==C:
+                return True
+            i+=1
+            A=C
+        return False 
