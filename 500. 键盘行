@@ -1,0 +1,21 @@
+class Solution:
+    def findWords(self, words: List[str]) -> List[str]:
+        list1=['q','w','e','r','t','y','u','i','o','p']
+        list2=['a','s','d','f','g','h','j','k','l']
+        list3=['z','x','c','v','b','n','m']
+        mark=0
+        result=[[] for _ in range(len(words))]
+        for i in range(len(words)):
+            for j in words[i]:
+                if j.lower() in list1:
+                    mark=1
+                elif j.lower() in list2:
+                    mark=2
+                elif j.lower() in list3:
+                    mark=3
+                result[i].append(mark)
+        return_list=[]
+        for item in range(len(result)):
+            if len(set(result[item]))==1:
+                return_list.append(words[item])
+        return return_list
