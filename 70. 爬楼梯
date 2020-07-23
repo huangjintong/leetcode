@@ -1,0 +1,9 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+            times={}
+            times[1]=1
+            times[2]=2
+            for i in range(3,n+1):
+                times[i]=times[i-1]+times[i-2]
+            return times[n]
+                
